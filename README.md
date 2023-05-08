@@ -51,7 +51,7 @@ Install dependencies: npm install
 
 Start the development server: npm start
 
-These are commonly used fields in the context of postcode lookup or address search functionality in web applications.
+The below fields are used in the context of postcode lookup or address search functionality in this applications.
 
 **Postcode**
 
