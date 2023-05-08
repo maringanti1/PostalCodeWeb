@@ -12,6 +12,8 @@ React.js for the front-end
 
 Axios for making HTTP requests to the Postcode Web API
 
+AG grid table
+
 AWS for hosting the application
 
 API Used
