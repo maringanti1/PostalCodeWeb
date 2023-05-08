@@ -1,154 +1,47 @@
-## To Run The Demo
+Features
+Search for postcodes by entering the postcode value and selecting the country from the dropdown
+View detailed information about the selected postcode, including country, region, admin district, parliamentary constituency, and area
+Technologies Used
+React.js for the front-end
+Axios for making HTTP requests to the Postcode Web API
+AWS for hosting the application
+API Used
+The application consumes the Postcode Web API to retrieve postcode data.
 
-```shell
-$ npm install
-$ npm start
-```
+https://g8w4x6soxi.execute-api.us-east-1.amazonaws.com/Prod/LookupPostcode/ig27nh
 
-## To Create the Example from Scratch
+https://g8w4x6soxi.execute-api.us-east-1.amazonaws.com/Prod/autocomplete/ig27n
 
-Create the basic app structure with `create-react-app`
+https://postcodes.io/ (External api)
 
-```
-npx create-react-app getting-started-5-mins-hooks
-cd getting-started-5-mins-hooks
-npm start
-```
+Ag Grid Web Application
+This is a web application built with the following features:
 
-Add AG Grid and AG Grid React into your project.
+Data loading into an ag grid table
+Filter and pagination functionality
+Hosted on AWS S3
+Adherence to SOLID principles
 
-```
-npm install --save ag-grid-community ag-grid-react
-```
+Features
+Data loading into ag grid
+The application loads data into an ag grid table using the ag-grid-community package.
 
-## Simplest Example Grid Component
+Filter and pagination functionality
+The application allows you to filter and paginate through the data in the ag grid table using the ag-grid-community package.
 
-The simplest example is to have the default row data as a module based const, and the column definitions declarative within the JSX.
+Hosting on AWS S3
+The application is hosted on AWS S3, which provides a secure and scalable environment for hosting web applications.
 
-```
-const InitialRowData = [
-    {make: "Toyota", model: "Celica", price: 35000},
-    {make: "Ford", model: "Mondeo", price: 32000},
-    {make: "Porsche", model: "Boxter", price: 72000}
-];
+Adherence to SOLID principles
+The application adheres to the SOLID principles of object-oriented programming, which helps to ensure that the code is modular, flexible, and easy to maintain.
+Installation
+To install Postcode Lookup, follow these steps:
 
-export function PostalCodeGrid() {
-
-    // set to default data
-    const [rowData, setRowData] = useState(InitialRowData);
-
-   return (
-       <div className="ag-theme-alpine" style={{height: 400, width: 600}}>   
-           <AgGridReact
-                defaultColDef={{sortable: true, filter: true }}
-                pagination={true}
-                rowData={rowData}>
-                <AgGridColumn field="make"></AgGridColumn>
-                <AgGridColumn field="model"></AgGridColumn>
-                <AgGridColumn field="price" editable={true}></AgGridColumn>
-           </AgGridReact>
-       </div>
-   )
-};
-```
-
-Loading Data from a server on first render can be done with an effect:
-
-```
-    // load the data after the grid has been setup
-    useEffect(() => {
-        fetch('https://www.ag-grid.com/example-assets/row-data.json')
-            .then(result => result.json())
-            .then(rowData => setRowData(rowData))
-    }, []);
-```
-
-## Considerations When Using AG Grid with React
-
-### Make ColumnDefs Objects
-
-The previous example uses declarative column definitions. Because these are baked into the JSX we will find it difficult to change the grid at runtime.
-
-By making the column definitions objects and part of the state, we can change them as necessary and the grid component will re-render.
-
-```
-const InitialRowData = [
-    {make: "Toyota", model: "Celica", price: 35000},
-    {make: "Ford", model: "Mondeo", price: 32000},
-    {make: "Porsche", model: "Boxter", price: 72000}
-];
-
-export function PostalCodeGrid() {
-
-    // set to default data
-    const [rowData, setRowData] = useState(InitialRowData);
-    const [colDefs, setColDefs] = useState([
-        {field: 'make'},
-        {field: 'model'},
-        {field: 'price', editable: 'true'},
-    ]);
-
-   return (
-       <div className="ag-theme-alpine" style={{height: 400, width: 600}}>   
-           <AgGridReact
-                defaultColDef={{sortable: true, filter: true }}
-                pagination={true}
-                rowData={rowData}
-                columnDefs={colDefs}>
-           </AgGridReact>
-       </div>
-   )
-};
-```
-
-With the above code I can amend the columns in the grid programmatically by changing the state. I've added it into a `useEffect` just to add a delay to make the change in grid more obvious.
-
-e.g.
-
-```
-    useEffect(
-        ()=> {
-        const changeColsTimer = setTimeout(() =>{
-            setColDefs([{field: 'make'},{field: 'model'}])
-            },3000);
-        return ()=>clearTimeout(changeColsTimer);
-            }
-    ,[]);
-```
-
-Defining the columns as objects through State offers more flexibility than declaring the columns in the JSX directly.
-
-### Memoise data that will not change
-
-If I didn't want to change the column defs then I would memoize them when mounting the component and move the data setup into the useSate definition.
-
-This will isolate the data so that it is no longer a Singleton shared across different instances of the PostalCodeGrid component and by memoizing the data is should speed up the rendering time when state, props or parent changes.
-
-```
-
-export function PostalCodeGrid() {
-
-    const [rowData, setRowData] = useState([
-        {make: "Toyota", model: "Celica", price: 35000},
-        {make: "Ford", model: "Mondeo", price: 32000},
-        {make: "Porsche", model: "Boxter", price: 72000}
-    ]);
-
-    const colDefs = useMemo( ()=> [
-    	{field: 'make'},
-    	{field: 'model'},
-    	{field: 'price', editable: 'true'},
-    ], []);
-
-   return (
-       <div className="ag-theme-alpine" style={{height: 400, width: 600}}>   
-           <AgGridReact
-                defaultColDef={{sortable: true, filter: true }}
-                pagination={true}
-                rowData={rowData}
-                columnDefs={colDefs}>
-           </AgGridReact>
-       </div>
-   )
-};
-```
+Clone the repository: git clone https://github.com/your-username/postcode-lookup.git
+Install dependencies: npm install
+Start the development server: npm start
+Usage
+To use Postcode Lookup, simply open the application in your web browser and start searching for postcodes by entering the postcode value and selecting the country from the dropdown. Once a postcode is selected, detailed information about the selected postcode will be displayed.
+ 
+Credits
+Postcode Lookup was created by Laxminarsimha Maringanti.
