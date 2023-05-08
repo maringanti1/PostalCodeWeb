@@ -69,4 +69,4 @@ The below fields are used in the context of postcode lookup or address search fu
 To use Postcode Lookup, simply open the application in your web browser and start searching for postcodes by entering the postcode value and selecting the country from the dropdown. Once a postcode is selected, detailed information about the selected postcode will be displayed.
  
 **Credits**
-Postcode Lookup was created by Laxminarsimha Maringanti.
+Postcode Lookup project is created by Laxminarsimha Maringanti.
