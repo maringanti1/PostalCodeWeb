@@ -1,0 +1,15 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Postal Code CloudFormation Stack"
+
+Resources:
+  PostalCodeWebS3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "postalcodeweb"
+      AccessControl: "Private"
+      Tags:
+        - Key: "Environment"
+          Value: "Production"
+        - Key: "PostalCodeWeb"
+          Value: "Postal Code Web"

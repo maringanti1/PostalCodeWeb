@@ -1,0 +1,19 @@
+{
+  "aws.cloudFormation.targets": {
+      "my-target": {
+          "account": "123456789012",
+          "region": "us-west-2"
+      },
+      "another-target": {
+          "account": "987654321098",
+          "region": "us-east-1"
+      }
+  },
+  "aws.samcli.samDeployParameters": [
+      {
+          "parameterName": "MyParameter",
+          "defaultValue": "MyValue",
+          "description": "My Parameter Description"
+      }
+  ]
+}
