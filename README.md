@@ -12,9 +12,11 @@ AWS for hosting the application
 API Used
 The application consumes the Postcode Web API to retrieve postcode data.
 
-https://g8w4x6soxi.execute-api.us-east-1.amazonaws.com/Prod/LookupPostcode/ig27nh
+**https://postalcodeweb.s3.amazonaws.com/index.html**
 
-https://g8w4x6soxi.execute-api.us-east-1.amazonaws.com/Prod/autocomplete/ig27n
+**https://g8w4x6soxi.execute-api.us-east-1.amazonaws.com/Prod/LookupPostcode/ig27nh**
+
+**https://g8w4x6soxi.execute-api.us-east-1.amazonaws.com/Prod/autocomplete/ig27n**
 
 https://postcodes.io/ (External api)
 
