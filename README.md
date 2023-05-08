@@ -38,14 +38,35 @@ The application is hosted on AWS S3, which provides a secure and scalable enviro
 
 Adherence to SOLID principles
 The application adheres to the SOLID principles of object-oriented programming, which helps to ensure that the code is modular, flexible, and easy to maintain.
-Installation
+
+**Installation**
+
 To install Postcode Lookup, follow these steps:
 
-Clone the repository: git clone https://github.com/your-username/postcode-lookup.git
+Clone the repository: git clone ** https://github.com/maringanti1/PostalCodeWeb.git**
+
+Branch: Master branch
+
 Install dependencies: npm install
+
 Start the development server: npm start
-Usage
+
+These are commonly used fields in the context of postcode lookup or address search functionality in web applications.
+
+**Postcode**
+
+**Region**
+
+**Country**
+
+**Area**
+**Parliamentary Constituency**
+
+**Admin District**
+
+**Usage**
+
 To use Postcode Lookup, simply open the application in your web browser and start searching for postcodes by entering the postcode value and selecting the country from the dropdown. Once a postcode is selected, detailed information about the selected postcode will be displayed.
  
-Credits
+**Credits**
 Postcode Lookup was created by Laxminarsimha Maringanti.
