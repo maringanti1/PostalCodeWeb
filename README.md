@@ -9,9 +9,13 @@ View detailed information about the selected postcode, including country, region
 **Technologies Used**
 
 React.js for the front-end
+
 Axios for making HTTP requests to the Postcode Web API
+
 AWS for hosting the application
+
 API Used
+
 The application consumes the Postcode Web API to retrieve postcode data.
 
 **https://postalcodeweb.s3.amazonaws.com/index.html**
