@@ -1,7 +1,11 @@
-Features
+**Features**
+
 Search for postcodes by entering the postcode value and selecting the country from the dropdown
+
 View detailed information about the selected postcode, including country, region, admin district, parliamentary constituency, and area
-Technologies Used
+
+**Technologies Used**
+
 React.js for the front-end
 Axios for making HTTP requests to the Postcode Web API
 AWS for hosting the application
