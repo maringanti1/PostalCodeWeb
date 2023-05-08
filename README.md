@@ -1,4 +1,4 @@
-**                                       **Postcode Lookup Web Application****
+**Postcode Lookup Web Application**
 
 **Features**
 
